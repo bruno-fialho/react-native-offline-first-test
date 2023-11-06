@@ -9,12 +9,15 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 
 import {Routes} from 'routes';
+import {PackageProvider} from 'context/package';
 
 function App(): JSX.Element {
   return (
-    <NavigationContainer>
-      <Routes />
-    </NavigationContainer>
+    <PackageProvider>
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
+    </PackageProvider>
   );
 }
 

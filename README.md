@@ -1,79 +1,41 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# contele react-native
 
-# Getting Started
+## Requisitos
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+### React Native
 
-## Step 1: Start the Metro Server
+- [x] Utilize React Native 0.60+.
+- [x] Demonstre habilidades com Redux ou Hooks para gerenciamento de estado.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Utilizei a ContextAPI do React para gerenciamento de estado:
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- `packages`: para guardar a lista de pacotes no banco de dados offline (WatermelonDB), assim toda a aplicação tem acesso a lista sem precisar buscar sempre no banco.
+- `updatePackages`: atualiza a lista de pacotes do banco de dados offline.
+- `interval`: para guardar o estado do intervalo de atualização para criação de pacotes
+- `updateInterval`: atualiza o estado do intervalo de atualização para criação de pacotes
+- `isOnline`: para guardar o estado da conexão com a internet
+- `toggleIsOnline`: atualiza o estado da conexão com a internet
 
-```bash
-# using npm
-npm start
+### Geolocalização
 
-# OR using Yarn
-yarn start
-```
+- [x] Implemente lógicas para obter a localização do celular.
 
-## Step 2: Start your Application
+Utilizei a biblioteca `@react-native-community/geolocation` para pegar a localização do dispositivo.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- [x] Desenvolva a lógica de sincronização de informações, incluindo a criação de pacotes e simulação de ambiente offline.
 
-### For Android
+Utilizei o WatermelonDB para armazenar os pacotes offline, para isso, além das props padrão da API, foi criada uma prop status que armazena qual o estado de sincronização do pacote
 
-```bash
-# using npm
-npm run android
+### Sincronização
 
-# OR using Yarn
-yarn android
-```
+- [x] Mostre como você trabalha com sincronização offline, incluindo o armazenamento de pontos offline e o envio ao servidor quando online.
 
-### For iOS
+Ao ficar online, é só verificado no banco de dados offline quais pacotes estão com status `PENDENT`, e estes são enviados para o servidor, com a rota POST.
 
-```bash
-# using npm
-npm run ios
+### Testes automatizados
 
-# OR using Yarn
-yarn ios
-```
+- [] Inclua testes automatizados para validar a lógica e funcionalidades implementadas.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+_Não tive tempo para implementar os testes automatizados, tenho experiência com testes unitários no mobile, e com testes de integração no frontend web. Nos meus cursos, já estudei a fundo testes de integração e e2e no backend. As principais libs que tive contato foram Jest, React Test Library e Vitest._
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+_Sei que é um ponto para melhorar, e tenho total disposição a me esforçar nesse ponto. Consigo me adaptar rápido a rotinas de testes pois aprendo rápido, com um pouco de estudo e análise dos códigos, absorvo tudo e já começo a aplicar na prática._

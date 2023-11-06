@@ -8,5 +8,9 @@
         "@components/*": ["src/components/*"],
         "types/*": ["src/@types/*"],
       },
+      "strictPropertyInitialization": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
     }
+    
 }
