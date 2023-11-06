@@ -1,5 +1,13 @@
 # contele react-native
 
+- Android
+
+https://github.com/bruno-fialho/react-native-offline-first-test/assets/45835631/480cbcb1-6c1f-4c59-802e-63e931bfc992
+
+- iOS
+
+https://github.com/bruno-fialho/react-native-offline-first-test/assets/45835631/aba8e76e-6931-4c4c-beed-3c83f8711055
+
 ## Requisitos
 
 ### React Native
@@ -34,7 +42,7 @@ Ao ficar online, é só verificado no banco de dados offline quais pacotes estã
 
 ### Testes automatizados
 
-- [] Inclua testes automatizados para validar a lógica e funcionalidades implementadas.
+- [ ] Inclua testes automatizados para validar a lógica e funcionalidades implementadas.
 
 _Não tive tempo para implementar os testes automatizados, tenho experiência com testes unitários no mobile, e com testes de integração no frontend web. Nos meus cursos, já estudei a fundo testes de integração e e2e no backend. As principais libs que tive contato foram Jest, React Test Library e Vitest._
 
